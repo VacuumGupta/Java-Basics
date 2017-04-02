@@ -1,0 +1,42 @@
+package com.vg;
+
+import java.util.Scanner;
+
+class PrintPrimes
+{
+	
+	static int counter2 = 0;
+	public static void main (String[] args)
+    {	
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("enter a number n to find out primes below it");
+		int n = scanner.nextInt();
+		int i ;
+        int num =0;
+        
+       //Empty String
+       String  primeNumbers = "";
+
+       for (i = 1; i <=n; i++)         
+       { 		  	  
+          int counter=0; 	  
+          
+          for(num =i; num>=1; num--)
+          {
+             if(i%num==0)
+             {
+ 		         counter = counter + 1;
+	         }
+	      }
+	         if (counter ==2)
+	         {
+	                                                   
+	             primeNumbers = primeNumbers + i + " ";
+	             counter2 = counter2 + 1;
+	         }	
+       }	
+       System.out.println("Prime numbers from 1 to " + n + " are");
+       System.out.println(primeNumbers);
+       System.out.println("no. of primes are " + counter2 );
+   }
+}
